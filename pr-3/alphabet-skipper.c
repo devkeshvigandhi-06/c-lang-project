@@ -7,5 +7,5 @@ int main(){
 		printf("%c\n",alpha);
 		alpha+=4;
 	}
-	while(alpha>=26);
+	while(alpha<='z');
 }
