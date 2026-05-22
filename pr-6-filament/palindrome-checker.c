@@ -1,21 +1,31 @@
 #include<stdio.h>
-
+#include<string.h>
 int main(){
 
     char str[11];
-    int i,length=0,palindrome=1;
+    int length=0;
     printf("Enter any string :- ");
     scanf("%s",&str);
     
-    while(str[length!='\0']){
+    while(str[length] !='\0'){
     	length++;
 	}
-	for(int i=0;i<length/2;i++){
-		if(str[i]!=str[length-1-i]){
-			palindrome=0;
+	//reverse string
+	int n=0;
+	char rev[11];
+	for(int i=length-1;i>=0;i--){
+		rev[n]=str[i];
+		n++;
+	}
+	
+	int track=0;
+	for(int i=0;i<length;i++){
+		if(str[i]!=rev[i]){
+			track++;
 		}
 	}
-	if(palindrome==1){
+
+	if(track==0){
 		printf("The given string is palindrome");
 	}else{
 		printf("The given string is not palindrome");
